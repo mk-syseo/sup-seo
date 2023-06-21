@@ -2,5 +2,5 @@
 
 ## Project setup
 ```
-seo install
+seo install 01
 ```
