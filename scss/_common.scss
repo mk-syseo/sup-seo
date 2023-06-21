@@ -1,0 +1,54 @@
+h1,
+h2 {
+    color: $primary-color;
+    font-size: $normalSize + 34px;
+}
+h3 {
+    color: $danger-color;
+    font-size: $normalSize + 14px;
+}
+h4 {
+    color: $blue-200;
+}
+label {
+    font-size: $normalSize - 2px;
+}
+button {
+    position: relative;
+    border: 1px solid $gray-100;
+    background-color: $white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    z-index: 1;
+    &:hover {
+        border-color: $red-200;
+        color: $red-200;
+    }
+}
+.hello {
+    position: relative;
+    border: 1px solid $gray-300;
+    padding: 20px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
+    p {
+        font-size: $normalSize - 2px;
+        line-height: 1.6;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .05s;
+        transition-delay: .05s;
+    }
+    &.clicked {
+        visibility: visible;
+        opacity: 1;
+        p {
+            visibility: visible;
+            opacity: 1;
+            transition: all .2s;
+            transition-delay: .2s;
+        }
+    }
+}
