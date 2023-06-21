@@ -1,2 +1,6 @@
 # sup-seo
-sup seo
+
+## Project setup
+```
+seo install
+```
