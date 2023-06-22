@@ -1,8 +1,6 @@
-let title = document.querySelector(".hello");
-let element = document.getElementById('helloid');
-document.getElementById("helloid").style.marginTop = "-" + (element.clientHeight) + "px";
-
 function handleClick(){
+    let title = document.querySelector(".hello");
+    let element = document.getElementById('helloid');
     let clickedClass = "clicked";
     if (title.classList.contains(clickedClass)){
         title.classList.remove(clickedClass);

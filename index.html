@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/scss/main.css">
     <link rel="stylesheet" href="./assets/font/pretendard.css">
-    <!-- <script src="./js/common.js"></script> -->
+    <script src="./js/common.js"></script>
 </head>
 <body>
     <main class="p-30">
@@ -17,11 +17,18 @@
             <button>버튼테스트 01</button>
             <p id="demo" class="mb-10"></p>
             <button onclick="handleClick()" class="w-100">버튼테스트</button>
-            <div class="hello" id="helloid">
-                <p>안녕하세요.</p>
-                <p>버튼테스트 영역입니다.</p>
-                <p>버튼테스트 영역입니다.</p>
-                <p>버튼테스트 영역입니다.</p>
+            <div>
+                <div class="hello" id="helloid">
+                    <p>안녕하세요.</p>
+                    <p>버튼테스트 영역입니다.</p>
+                    <p>버튼테스트 영역입니다.</p>
+                    <p>버튼테스트 영역입니다.</p>
+                    <p>버튼테스트 영역입니다.</p>
+                </div>
+                <script>
+                    let element = document.getElementById('helloid');
+                    element.style.marginTop = "-" + (element.clientHeight) + "px";
+                </script>
             </div>
             <p class="fs-50 fw-900">폰트사이즈</p>
             <p class="fs-50 fw-800">폰트사이즈</p>
@@ -67,22 +74,4 @@
         </section>
     </main>
 </body>
-<script>
-    let title = document.querySelector(".hello");
-    let element = document.getElementById('helloid');
-    document.getElementById("helloid").style.marginTop = "-" + (element.clientHeight) + "px";
-
-    function handleClick(){
-        let clickedClass = "clicked";
-        if (title.classList.contains(clickedClass)){
-            title.classList.remove(clickedClass);
-            title.style.marginTop = "-" + (element.clientHeight) + "px";
-            console.log("닫힘");
-        } else {
-            title.classList.add(clickedClass);
-            title.style.marginTop = 10 + "px";
-            console.log(element.clientHeight);
-        };
-    }
-</script>
 </html>
