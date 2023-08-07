@@ -39096,8 +39096,8 @@ button:hover {
 }
 
 h1 {
-  width: 10rem;
-  height: 10rem;
+  width: 13rem;
+  height: 13rem;
   background: url(./../images/front-logo.svg) no-repeat center;
 }
 
@@ -39106,27 +39106,63 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 4rem;
-  padding: 0 0.5rem;
+  height: 14rem;
+  min-width: 14rem;
+  padding: 0 2.3rem;
   font-size: 2rem;
   text-decoration: none;
-  transition: all 0.3s;
   font-weight: 700;
-  color: #333333;
-}
-.btn-link:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0.2rem;
-  background: #214bbe;
-  bottom: 0;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0.6rem 0.6rem 3rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  z-index: 1;
   transition: all 0.3s;
 }
 .btn-link:hover {
-  color: #214bbe;
+  color: rgb(255, 255, 255);
+  margin-top: -1rem;
+  min-width: 18rem;
 }
-.btn-link:hover:after {
+
+.lottie-area {
+  position: absolute;
+  left: calc(50% - 19rem);
+  top: calc(50% - 13rem);
+  width: 38rem;
+  height: 10rem;
+}
+
+.mp-area {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.mp-area > video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
+  height: 130%;
+}
+
+/* mobile */
+@media (max-width: 800px) {
+  .lottie-area {
+    left: calc(50% - 14rem);
+    top: calc(50% - 8rem);
+    width: 28rem;
+    height: 8rem;
+  }
+  .mp-area > video {
+    width: 400%;
+  }
 }/*# sourceMappingURL=main.css.map */

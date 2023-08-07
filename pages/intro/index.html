@@ -11,16 +11,21 @@
 </head>
 <body>
     <main class="p-30 flex align-center justify-center h-100">
-        <section class="flex flex-col align-center gap-20">
-            <h1 style="z-index: 1;"><span class="sr-only">Component Library</span></h1>
-            <a href="./../snippet/front.html" class="btn-link">바로가기</a>
-            <div style="position: absolute; left: calc(50% - 16rem); top: calc(50% - 21rem); width: 20rem; height: 20rem;">
-                <lottie-player src="./../../lottiejs/animation_ll0iypgx.json" background="transparent" speed="1" loop autoplay>
+        <section class="flex flex-col align-center">
+            <h1 class="sr-only"><span>Component Library</span></h1>
+            <a href="./../snippet/front.html" class="btn-link">View</a>
+            <!-- <div class="lottie-area">
+                <lottie-player src="./../../lottiejs/animation_welcome.json" background="transparent" speed="1" loop autoplay>
                 </lottie-player>
-            </div>
+            </div> -->
         </section>
+        <div class="mp-area">
+            <video muted autoplay loop>
+                <source src="./../../assets/images/bg-mp-sd.mp4" type="video/mp4">
+            </video>
+        </div>
     </main>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 </body>
 </html>
