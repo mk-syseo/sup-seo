@@ -52,3 +52,37 @@ button {
         }
     }
 }
+h1 {
+    width: 10rem;
+    height: 10rem;
+    background: url(./../images/front-logo.svg) no-repeat center;
+}
+.btn-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    padding: 0 .5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all .3s;
+    font-weight: 700;
+    color: $gray-100;
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: .2rem;
+        background: $primary-color;
+        bottom: 0;
+        transition: all .3s;
+    }
+    &:hover {
+        color: $primary-color;
+        &:after {
+            width: 100%;
+        }
+    }
+}

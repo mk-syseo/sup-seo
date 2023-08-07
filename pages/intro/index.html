@@ -10,72 +10,14 @@
     <script src="./../../assets/js/common.js"></script>
 </head>
 <body>
-    <main class="p-30">
-        <section>
-            <h1 class="sr-only">Test</h1>
-            <div style="position: absolute; right: 30px; top: 45px; width: 200px; height: 200px;">
-                <lottie-player src="./../../lottiejs/142051-toucan-walk-cycle.json" background="transparent" speed="1" loop autoplay>
+    <main class="p-30 flex align-center justify-center h-100">
+        <section class="flex flex-col align-center gap-20">
+            <h1 style="z-index: 1;"><span class="sr-only">Component Library</span></h1>
+            <a href="./../snippet/front.html" class="btn-link">바로가기</a>
+            <div style="position: absolute; left: calc(50% - 16rem); top: calc(50% - 21rem); width: 20rem; height: 20rem;">
+                <lottie-player src="./../../lottiejs/animation_ll0iypgx.json" background="transparent" speed="1" loop autoplay>
                 </lottie-player>
             </div>
-            <h2 class="text-center">sup-seo</h2>
-            <h3>sup small</h3>
-            <button>버튼테스트 01</button>
-            <p id="demo" class="mb-10"></p>
-            <button onclick="handleClick()" class="w-100">버튼테스트</button>
-            <div>
-                <div class="hello" id="helloid">
-                    <p>안녕하세요.</p>
-                    <p>버튼테스트 영역입니다.</p>
-                    <p>버튼테스트 영역입니다.</p>
-                    <p>버튼테스트 영역입니다.</p>
-                    <p>버튼테스트 영역입니다.</p>
-                </div>
-                <script>
-                    let element = document.getElementById('helloid');
-                    element.style.marginTop = "-" + (element.clientHeight) + "px";
-                </script>
-            </div>
-            <p class="fs-50 fw-900">폰트사이즈</p>
-            <p class="fs-50 fw-800">폰트사이즈</p>
-            <p class="fs-40 fw-700">폰트사이즈</p>
-            <p class="fs-30 fw-600">폰트사이즈</p>
-            <p class="fs-30">폰트사이즈</p>
-            <p class="fs-30 fw-400">폰트사이즈</p>
-            <p class="fs-20 fw-300">폰트사이즈</p>
-            <p class="fs-20 fw-200">폰트사이즈</p>
-            <p class="fs-20 fw-100">폰트사이즈</p>
-            <form class="pt-20">
-                <h4>Padding-top 20px Exgample</h4>
-                <fieldset class="flex">
-                    <legend>체크박스</legend>
-                    <div class="flex-1">
-                        <label for="ch1">체크박스</label>
-                        <input id="ch1" type="checkbox">
-                    </div>
-                    <div class="flex-1">
-                        <label for="ch2">체크박스</label>
-                        <input id="ch2" type="checkbox">
-                    </div>
-                    <div class="flex-0">
-                        <label for="in1">입력</label>
-                        <input type="text" id="in1">
-                    </div>
-                </fieldset>
-            </form>
-            <form class="mt-20">
-                <h4>Margin-top 20px Exgample</h4>
-                <fieldset class="flex gap-30">
-                    <legend>라디오버튼</legend>
-                    <div>
-                        <label for="rd1">라디오버튼1</label>
-                        <input id="rd1" type="radio" name="rd-set" checked>
-                    </div>
-                    <div>
-                        <label for="rd2">라디오버튼2</label>
-                        <input id="rd2" type="radio" name="rd-set">
-                    </div>
-                </fieldset>
-            </form>
         </section>
     </main>
 

@@ -11,6 +11,7 @@ body {
   height: 100%;
   font-family: "Pretendard";
   font-weight: 500;
+  font-size: 10px;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -39036,7 +39037,7 @@ button {
 
 h1,
 h2 {
-  color: #1f3de7;
+  color: #214bbe;
   font-size: 50px;
 }
 
@@ -39092,4 +39093,40 @@ button:hover {
   opacity: 1;
   transition: all 0.2s;
   transition-delay: 0.2s;
+}
+
+h1 {
+  width: 10rem;
+  height: 10rem;
+  background: url(./../images/front-logo.svg) no-repeat center;
+}
+
+.btn-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 700;
+  color: #333333;
+}
+.btn-link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0.2rem;
+  background: #214bbe;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.btn-link:hover {
+  color: #214bbe;
+}
+.btn-link:hover:after {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
