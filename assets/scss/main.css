@@ -39114,6 +39114,7 @@ h1 {
   bottom: 0;
   width: 8rem;
   height: 6rem;
+  z-index: 3;
 }
 
 .mp-area {
@@ -39134,19 +39135,18 @@ h1 {
   height: 130%;
 }
 
-body.sub {
-  display: flex;
-}
-
 main {
+  position: relative;
   height: 100%;
 }
 
 aside {
-  position: relative;
-  flex: none;
+  position: fixed;
   width: 8rem;
   height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
   transition: all 0.3s;
 }
 aside.active {
@@ -39155,7 +39155,11 @@ aside.active {
 aside > ul {
   position: relative;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0.2rem 2rem 1rem rgba(0, 0, 0, 0.05);
 }
 aside > ul > li {
   height: 6rem;
@@ -39163,22 +39167,75 @@ aside > ul > li {
 aside > ul > li > a {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 8rem;
   height: 6rem;
-  border: 1px dashed rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
   text-decoration: none;
   font-size: 1.4rem;
+  transition: all 0.3s;
+}
+aside > ul > li > a.btn-home {
+  height: 8rem;
+  background: url(./../images/front-logo.svg) no-repeat right;
+  background-size: 8rem;
+}
+aside > ul > li:has(.btn-home) {
+  height: 8rem;
+  overflow: hidden;
+}
+aside.active > ul > li > a {
+  width: 100%;
+}
+aside.active > ul > li > a.btn-home {
+  width: 100%;
 }
 aside > .btn-menuToggle {
   position: absolute;
   display: block;
-  right: -3rem;
-  top: 0;
-  width: 3rem;
-  height: 4rem;
+  right: -7rem;
+  top: 2rem;
+  width: 5rem;
+  height: 5rem;
   padding: 0;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 50%;
+  border: 1px dashed black;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0.2rem 1.5rem 0.5rem rgba(0, 0, 0, 0.05);
+  animation: ball 7s linear Infinite;
+}
+
+@keyframes ball {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box {
+  width: 40rem;
+  height: 40rem;
+  display: block;
+  position: relative;
+}
+.box.t01 {
+  background-color: #214bbe;
+}
+.box.t02 {
+  background-color: #697be6;
+}
+.box.t03 {
+  width: 60rem;
+  height: 20rem;
+  background-color: #e71f2a;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.box.t04 {
+  background-color: #e98287;
 }
 
 /* mobile */
@@ -39186,11 +39243,32 @@ aside > .btn-menuToggle {
   .mp-area > video {
     width: 400%;
   }
+  main {
+    left: 0;
+  }
   aside {
     margin-left: -8rem;
   }
   aside.active {
     width: 50%;
     margin-left: 0;
+  }
+  aside > ul > li > a.btn-home {
+    height: 6rem;
+    background-size: 6rem;
+  }
+  aside > ul > li:has(.btn-home) {
+    height: 6rem;
+  }
+  aside > .btn-menuToggle {
+    right: -7rem;
+    width: 5rem;
+    height: 5rem;
+  }
+  .box {
+    width: 100%;
+  }
+  .box.t03 {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

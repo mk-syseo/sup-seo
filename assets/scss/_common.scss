@@ -70,6 +70,7 @@ h1 {
     bottom: 0;
     width: 8rem;
     height: 6rem;
+    z-index: 3;
 }
 .mp-area {
     position: absolute;
@@ -88,17 +89,17 @@ h1 {
         height: 130%;
     }
 }
-body.sub {
-    display: flex;
-}
 main {
+    position: relative;
     height: 100%;
 }
 aside {
-    position: relative;
-    flex: none;
+    position: fixed;
     width: 8rem;
     height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
     transition: all .3s;
     &.active {
         width: 30rem;
@@ -106,30 +107,95 @@ aside {
     > ul {
         position: relative;
         height: 100%;
-        background-color: rgba(0,0,0,.05);
+        border-right: 1px solid rgba(255,255,255,.7);
+        background-color: rgba(255,255,255,.7);
+        backdrop-filter: blur(.5rem);
+        -webkit-backdrop-filter: blur(.5rem);
+        box-shadow: 0 .2rem 2rem 1rem rgba(0,0,0,.05);
         > li {
             height: 6rem;
             > a {
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 width: 8rem;
                 height: 6rem;
-                border: 1px dashed rgba(0,0,0,.3);
+                border-bottom: 1px dashed rgba(0,0,0,.2);
                 text-decoration: none;
                 font-size: 1.4rem;
+                transition: all .3s;
+                &.btn-home {
+                    height: 8rem;
+                    background: url(./../images/front-logo.svg) no-repeat right;
+                    background-size: 8rem;
+                }
+            }
+            &:has(.btn-home) {
+                height: 8rem;
+                overflow: hidden;
+            }
+        }
+    }
+    &.active {
+        > ul {
+            > li {
+                > a {
+                    width: 100%;
+                    &.btn-home {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
     > .btn-menuToggle {
         position: absolute;
         display: block;
-        right: -3rem;
-        top: 0;
-        width: 3rem;
-        height: 4rem;
+        right: -7rem;
+        top: 2rem;
+        width: 5rem;
+        height: 5rem;
         padding: 0;
-        border-radius: 0 1rem 1rem 0;
+        border-radius: 50%;
+        border: 1px dashed black;
+        background-color: rgba(255,255,255,.7);
+        backdrop-filter: blur(.5rem);
+        -webkit-backdrop-filter: blur(.5rem);
+        box-shadow: 0 .2rem 1.5rem .5rem rgba(0,0,0,.05);
+        animation: ball 7s linear Infinite;
+    }
+}
+
+@keyframes ball {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// 스크롤트리거 테스트
+.box {
+    width: 40rem;
+    height: 40rem;
+    display: block;
+    position: relative;
+    &.t01 {
+        background-color: $blue-100;
+    }
+    &.t02 {
+        background-color: $blue-200;
+    }
+    &.t03 {
+        width: 60rem;
+        height: 20rem;
+        background-color: $red-100;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    &.t04 {
+        background-color: $red-200;
     }
 }
 
@@ -142,11 +208,39 @@ aside {
             width: 400%;
         }
     }
+    main {
+        left: 0;
+    }
     aside {
         margin-left: -8rem;
         &.active {
             width: 50%;
             margin-left: 0;
+        }
+        > ul {
+            > li {
+                > a {
+                    &.btn-home {
+                        height: 6rem;
+                        background-size: 6rem;
+                    }
+                }
+                &:has(.btn-home) {
+                    height: 6rem;
+                }
+            }
+        }
+        > .btn-menuToggle {
+            right: -7rem;
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    .box {
+        width: 100%;
+        &.t03 {
+            width: 100%;
         }
     }
 }
