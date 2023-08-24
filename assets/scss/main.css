@@ -39192,10 +39192,10 @@ aside.active > ul > li > a.btn-home {
 aside > .btn-menuToggle {
   position: absolute;
   display: block;
-  right: -7rem;
+  right: -8rem;
   top: 2rem;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   padding: 0;
   border-radius: 50%;
   border: 1px dashed black;
