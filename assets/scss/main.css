@@ -39103,9 +39103,12 @@ h1 {
 }
 .btn-link p {
   font-size: 2rem;
+  font-weight: 400;
 }
 .btn-link p.tit {
   font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .lottie-area {
@@ -39214,6 +39217,7 @@ aside > .btn-menuToggle {
     transform: rotate(360deg);
   }
 }
+/* 스크롤트리거 테스트 */
 .box {
   width: 40rem;
   height: 40rem;
@@ -39270,5 +39274,14 @@ aside > .btn-menuToggle {
   }
   .box.t03 {
     width: 100%;
+  }
+  .btn-link p {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .btn-link p.tit {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -59,8 +59,11 @@ h1 {
     }
     p {
         font-size: 2rem;
+        font-weight: 400;
         &.tit {
             font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
     }
 }
@@ -174,7 +177,7 @@ aside {
     }
 }
 
-// 스크롤트리거 테스트
+/* 스크롤트리거 테스트 */
 .box {
     width: 40rem;
     height: 40rem;
@@ -196,51 +199,5 @@ aside {
     }
     &.t04 {
         background-color: $red-200;
-    }
-}
-
-/* mobile */
-@media (max-width: 800px) {
-    .lottie-area {
-    }
-    .mp-area {
-        > video {
-            width: 400%;
-        }
-    }
-    main {
-        left: 0;
-    }
-    aside {
-        margin-left: -8rem;
-        &.active {
-            width: 50%;
-            margin-left: 0;
-        }
-        > ul {
-            > li {
-                > a {
-                    &.btn-home {
-                        height: 6rem;
-                        background-size: 6rem;
-                    }
-                }
-                &:has(.btn-home) {
-                    height: 6rem;
-                }
-            }
-        }
-        > .btn-menuToggle {
-            right: -7rem;
-            width: 5rem;
-            height: 5rem;
-        }
-    }
-
-    .box {
-        width: 100%;
-        &.t03 {
-            width: 100%;
-        }
     }
 }
