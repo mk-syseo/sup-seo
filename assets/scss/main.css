@@ -39042,12 +39042,13 @@ h2 {
 }
 
 h3 {
-  color: #e71f2a;
-  font-size: 3rem;
+  color: #222222;
+  font-size: 4rem;
 }
 
 h4 {
-  color: #697be6;
+  color: #222222;
+  font-size: 3rem;
 }
 
 label {
@@ -39071,6 +39072,38 @@ h1 {
   width: 13rem;
   height: 13rem;
   background: url(./../images/front-logo.svg) no-repeat center;
+}
+
+pre {
+  background-color: #222222;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 1rem 0 0 0;
+  padding: 0 3rem;
+  border-radius: 2rem;
+  overflow: auto;
+}
+
+.code-blue {
+  color: #6d8fff;
+}
+
+.code-lingtblue {
+  color: #6ecaff;
+}
+
+.code-lingtblue2 {
+  color: #b2e7ff;
+}
+
+.code-yellow {
+  color: #fffeb7;
+}
+
+.code-orange {
+  color: #ffa86e;
 }
 
 .btn-link {
@@ -39197,18 +39230,15 @@ aside.active > ul > li > a.btn-home {
 aside > .btn-menuToggle {
   position: absolute;
   display: block;
-  right: -8rem;
-  top: 2rem;
+  right: -7rem;
+  top: 1rem;
   width: 6rem;
   height: 6rem;
   padding: 0;
   border-radius: 50%;
-  border: 1px dashed black;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(0.5rem);
-  -webkit-backdrop-filter: blur(0.5rem);
-  box-shadow: 0 0.2rem 1.5rem 0.5rem rgba(0, 0, 0, 0.05);
-  animation: ball 7s linear Infinite;
+  border: none;
+  background: #fff url(./../images/common/btn-sidemenu.svg) no-repeat center;
+  animation: ball 10s linear Infinite;
 }
 
 .card {
@@ -39225,20 +39255,20 @@ aside > .btn-menuToggle {
 }
 /* 스크롤트리거 테스트 */
 .box {
-  width: 40rem;
-  height: 40rem;
+  width: calc(100% - 27rem);
+  margin-left: 18rem;
+  min-height: 25rem;
   display: block;
   position: relative;
+  padding: 3.5rem 0 0 0;
 }
 .box.t01 {
-  background-color: #214bbe;
+  background-color: white;
 }
 .box.t02 {
   background-color: #697be6;
 }
 .box.t03 {
-  width: 60rem;
-  height: 20rem;
   background-color: #e71f2a;
   position: sticky;
   top: 0;
@@ -39276,6 +39306,16 @@ aside > .btn-menuToggle {
     height: 5rem;
   }
   .box {
+    width: 100%;
+    margin-left: 0;
+    padding: 5rem 2rem 0 2rem;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box.t01 > div {
+    display: block;
     width: 100%;
   }
   .box.t03 {

@@ -4,11 +4,12 @@ h2 {
     font-size: 5rem;
 }
 h3 {
-    color: $danger-color;
-    font-size: 3rem;
+    color: $black;
+    font-size: 4rem;
 }
 h4 {
-    color: $blue-200;
+    color: $black;
+    font-size: 3rem;
 }
 label {
     font-size: 1.4rem;
@@ -29,6 +30,32 @@ h1 {
     width: 13rem;
     height: 13rem;
     background: url(./../images/front-logo.svg) no-repeat center;
+}
+pre {
+    background-color: $black;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 1rem 0 0 0;
+    padding: 0 3rem;
+    border-radius: 2rem;
+    overflow: auto;
+}
+.code-blue {
+    color: $code-blue;
+}
+.code-lingtblue {
+    color: $code-lingtblue;
+}
+.code-lingtblue2 {
+    color: $code-lingtblue2;
+}
+.code-yellow {
+    color: $code-yellow;
+}
+.code-orange {
+    color: $code-orange;
 }
 .btn-link {
     position: relative;
@@ -155,18 +182,15 @@ aside {
     > .btn-menuToggle {
         position: absolute;
         display: block;
-        right: -8rem;
-        top: 2rem;
+        right: -7rem;
+        top: 1rem;
         width: 6rem;
         height: 6rem;
         padding: 0;
         border-radius: 50%;
-        border: 1px dashed black;
-        background-color: rgba(255,255,255,.7);
-        backdrop-filter: blur(.5rem);
-        -webkit-backdrop-filter: blur(.5rem);
-        box-shadow: 0 .2rem 1.5rem .5rem rgba(0,0,0,.05);
-        animation: ball 7s linear Infinite;
+        border: none;
+        background: #fff url(./../images/common/btn-sidemenu.svg) no-repeat center;
+        animation: ball 10s linear Infinite;
     }
 }
 .card {
@@ -184,19 +208,19 @@ aside {
 
 /* 스크롤트리거 테스트 */
 .box {
-    width: 40rem;
-    height: 40rem;
+    width: calc(100% - 27rem);
+    margin-left: 18rem;
+    min-height: 25rem;
     display: block;
     position: relative;
+    padding: 3.5rem 0 0 0;
     &.t01 {
-        background-color: $blue-100;
+        background-color: white;
     }
     &.t02 {
         background-color: $blue-200;
     }
     &.t03 {
-        width: 60rem;
-        height: 20rem;
         background-color: $red-100;
         position: sticky;
         top: 0;

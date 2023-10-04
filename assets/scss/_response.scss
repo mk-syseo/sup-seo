@@ -38,6 +38,18 @@
 
     .box {
         width: 100%;
+        margin-left: 0;
+        padding: 5rem 2rem 0 2rem;
+        min-height: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &.t01 {
+            > div {
+                display: block;
+                width: 100%;
+            }
+        }
         &.t03 {
             width: 100%;
         }
