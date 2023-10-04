@@ -39082,7 +39082,7 @@ h1 {
   gap: 1rem;
   min-height: 14rem;
   min-width: 14rem;
-  padding: 2rem 2.3rem;
+  padding: 2.5rem 4rem;
   font-size: 2rem;
   text-decoration: none;
   font-weight: 700;
@@ -39098,17 +39098,19 @@ h1 {
 }
 .btn-link:hover {
   color: rgb(255, 255, 255);
-  margin-top: -1rem;
+  margin-top: -1.5rem;
   min-width: 18rem;
 }
 .btn-link p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 .btn-link p.tit {
   font-size: 3rem;
-  font-weight: 600;
   margin-bottom: 1rem;
+}
+.btn-link p.tit span {
+  font-weight: 700;
 }
 
 .lottie-area {
@@ -39207,6 +39209,10 @@ aside > .btn-menuToggle {
   -webkit-backdrop-filter: blur(0.5rem);
   box-shadow: 0 0.2rem 1.5rem 0.5rem rgba(0, 0, 0, 0.05);
   animation: ball 7s linear Infinite;
+}
+
+.card {
+  min-width: 15rem;
 }
 
 @keyframes ball {
