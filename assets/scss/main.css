@@ -39207,10 +39207,12 @@ aside > ul > li > a {
   align-items: center;
   width: 8rem;
   height: 6rem;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  justify-content: center;
   text-decoration: none;
   font-size: 1.4rem;
   transition: all 0.3s;
+  color: #333333;
+  font-weight: 700;
 }
 aside > ul > li > a.btn-home {
   height: 8rem;

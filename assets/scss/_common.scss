@@ -151,10 +151,12 @@ aside {
                 align-items: center;
                 width: 8rem;
                 height: 6rem;
-                border-bottom: 1px dashed rgba(0,0,0,.2);
+                justify-content: center;
                 text-decoration: none;
                 font-size: 1.4rem;
                 transition: all .3s;
+                color: $gray-100;
+                font-weight: 700;
                 &.btn-home {
                     height: 8rem;
                     background: url(./../images/front-logo.svg) no-repeat right;
