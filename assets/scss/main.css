@@ -39191,7 +39191,7 @@ aside {
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   transition: all 0.3s;
 }
 aside.active {
@@ -39248,6 +39248,21 @@ aside > .btn-menuToggle {
   border: none;
   background: #fff url(./../images/common/btn-sidemenu.svg) no-repeat center;
   animation: ball 10s linear Infinite;
+}
+
+.dim {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+aside.active + .dim {
+  display: block;
 }
 
 .card {
