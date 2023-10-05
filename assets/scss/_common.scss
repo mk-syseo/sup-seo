@@ -31,6 +31,9 @@ h1 {
     height: 13rem;
     background: url(./../images/front-logo.svg) no-repeat center;
 }
+.noscroll {
+    overflow: hidden;
+}
 pre {
     background-color: $black;
     color: white;

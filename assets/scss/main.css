@@ -39074,6 +39074,10 @@ h1 {
   background: url(./../images/front-logo.svg) no-repeat center;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 pre {
   background-color: #222222;
   color: white;
