@@ -39149,7 +39149,7 @@ pre {
 .lottie-area {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 2rem;
   width: 8rem;
   height: 6rem;
   z-index: 3;
