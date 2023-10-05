@@ -39257,12 +39257,13 @@ aside > .btn-menuToggle {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
 
 aside.active + .dim {
   display: block;
+  animation: fadeIn 0.5s linear;
 }
 
 .card {
@@ -39275,6 +39276,14 @@ aside.active + .dim {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /* 스크롤트리거 테스트 */
