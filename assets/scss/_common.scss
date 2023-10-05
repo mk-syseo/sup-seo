@@ -22,8 +22,8 @@ button {
     border-radius: .6rem;
     z-index: 1;
     &:hover {
-        border-color: $red-200;
-        color: $red-200;
+        border-color: $blue-200;
+        color: $blue-200;
     }
 }
 h1 {
@@ -215,9 +215,10 @@ aside {
     min-height: 25rem;
     display: block;
     position: relative;
-    padding: 3.5rem 0 0 0;
+    padding: 0;
     &.t01 {
         background-color: white;
+        padding: 3.5rem 0 0 0;
     }
     &.t02 {
         background-color: $blue-200;
@@ -230,5 +231,16 @@ aside {
     }
     &.t04 {
         background-color: $red-200;
+    }
+}
+
+.testDiv {
+    border: 1px solid $gray-100;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 20rem;
+    p {
+        font-size: 1.6rem;
     }
 }

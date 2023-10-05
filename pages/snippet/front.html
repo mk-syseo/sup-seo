@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CompoLib</title>
-        <link rel="shortcut icon" href="./../../assets/images/favicon.ico">
-        <link rel="stylesheet" href="./../../assets/scss/main.css">
-        <link rel="stylesheet" href="./../../assets/font/pretendard.css">
-        <script type="module" src="./../../assets/js/common.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompoLib</title>
+    <link rel="shortcut icon" href="./../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="./../../assets/scss/main.css">
+    <link rel="stylesheet" href="./../../assets/font/pretendard.css">
+    <script type="module" src="./../../assets/js/common.js"></script>
+</head>
 <body class="sub">
     <aside class="menu">
         <div class="lottie-area">
@@ -40,7 +40,7 @@
                 <h3>#Java Script</h3>
                 <div class="mt-30">
                     <h4>Toggle</h4>
-<pre class="mt-15">
+<pre class="mt-12">
 <code>
 <span class="code-blue">const</span> <span class="code-lingtblue">menu</span> = <span class="code-lingtblue2">document</span>.<span class="code-yellow">querySelector</span>(<span class="code-orange">".menu"</span>);
 <span class="code-blue">const</span> <span class="code-lingtblue">menuToggle</span> = <span class="code-lingtblue2">document</span>.<span class="code-yellow">querySelector</span>(<span class="code-orange">".btn-menuToggle"</span>);
@@ -50,19 +50,36 @@
 </code>
 </pre>
                 </div>
+                <div class="mt-30">
+                    <h4>ClientHeight</h4>
+<pre class="mt-12">
+<code>
+<span class="code-blue">const</span> <span class="code-lingtblue">clientHeight</span> = <span class="code-lingtblue2">document</span>.<span class="code-yellow">querySelector</span>(<span class="code-orange">".testDiv"</span>).<span class="code-lingtblue">clientHeight</span>;
+<span class="code-yellow">alert</span>(<span class="code-lingtblue">clientHeight</span>);
+</code>
+</pre>
+                    <div class="mt-10">
+                        <button type="button" class="btn-test">Click</button>
+                        <div class="testDiv">
+                            <p>Height Value</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="box t02"></div>
-            <div class="box t03"></div>
             <div class="box t04"></div>
-            <div class="box t01"></div>
+            <div class="box t03"></div>
             <div class="box t02"></div>
+            <div class="box t04"></div>
+            <div class="box t02"></div>
+            <div class="box t04"></div>
         </section>
         <section class="flex align-start flex-col gap-40 mt-40">
-            <div class="box t04"></div>
-            <div class="box t04"></div>
-            <div class="box t01"></div>
             <div class="box t02"></div>
             <div class="box t04"></div>
+            <div class="box t02"></div>
+            <div class="box t04"></div>
+            <div class="box t02"></div>
         </section>
     </main>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

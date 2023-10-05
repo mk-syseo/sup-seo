@@ -39064,8 +39064,8 @@ button {
   z-index: 1;
 }
 button:hover {
-  border-color: #e98287;
-  color: #e98287;
+  border-color: #697be6;
+  color: #697be6;
 }
 
 h1 {
@@ -39262,10 +39262,11 @@ aside > .btn-menuToggle {
   min-height: 25rem;
   display: block;
   position: relative;
-  padding: 3.5rem 0 0 0;
+  padding: 0;
 }
 .box.t01 {
   background-color: white;
+  padding: 3.5rem 0 0 0;
 }
 .box.t02 {
   background-color: #697be6;
@@ -39278,6 +39279,17 @@ aside > .btn-menuToggle {
 }
 .box.t04 {
   background-color: #e98287;
+}
+
+.testDiv {
+  border: 1px solid #333333;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 20rem;
+}
+.testDiv p {
+  font-size: 1.6rem;
 }
 
 /* mobile */
@@ -39310,11 +39322,14 @@ aside > .btn-menuToggle {
   .box {
     width: 100%;
     margin-left: 0;
-    padding: 5rem 2rem 0 2rem;
+    padding: 0 2rem;
     min-height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .box.t01 {
+    padding: 5rem 2rem 0 2rem;
   }
   .box.t01 > div {
     display: block;
