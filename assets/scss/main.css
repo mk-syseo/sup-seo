@@ -39113,6 +39113,10 @@ pre {
   color: #ffa86e;
 }
 
+.code-purple {
+  color: #ff8df9;
+}
+
 .btn-link {
   position: relative;
   display: flex;
@@ -39143,19 +39147,19 @@ pre {
 }
 .btn-link p {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .btn-link p.tit {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 .btn-link p.tit span {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .lottie-area {
   position: absolute;
-  left: 0;
+  left: 0.35rem;
   bottom: 2rem;
   width: 8rem;
   height: 8rem;
@@ -39321,6 +39325,37 @@ aside.active + .dim {
 }
 .testDiv p {
   font-size: 1.6rem;
+}
+
+.accordion {
+  background-color: #fff;
+}
+.accordion ul {
+  border-bottom: 1px solid #333333;
+}
+.accordion ul > li {
+  border-top: 1px solid #333333;
+}
+.accordion ul > li .desc {
+  transition: all 0.3s;
+  height: 0;
+  overflow: hidden;
+  font-size: 1.6rem;
+  background-color: #eeeeee;
+}
+.accordion ul > li .desc p {
+  padding: 1rem 2rem;
+}
+.accordion ul > li.on .desc {
+  z-index: 1;
+  height: 12rem;
+}
+.accordion ul > li .title {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* mobile */

@@ -63,6 +63,9 @@ pre {
 .code-orange {
     color: $code-orange;
 }
+.code-purple {
+    color: $code-purple;
+}
 .btn-link {
     position: relative;
     display: flex;
@@ -92,19 +95,19 @@ pre {
     }
     p {
         font-size: 1.8rem;
-        font-weight: 400;
+        font-weight: 500;
         &.tit {
             font-size: 3rem;
             margin-bottom: 1rem;
             span {
-                font-weight: 700;
+                font-weight: 800;
             }
         }
     }
 }
 .lottie-area {
     position: absolute;
-    left: 0;
+    left: .35rem;
     bottom: 2rem;
     width: 8rem;
     height: 8rem;
@@ -273,5 +276,38 @@ aside {
     width: 20rem;
     p {
         font-size: 1.6rem;
+    }
+}
+
+.accordion {
+    background-color: #fff;
+    ul {
+        > li {
+            border-top: 1px solid $gray-100;
+            .desc {
+                transition: all .3s;
+                height: 0;
+                overflow: hidden;
+                font-size: 1.6rem;
+                background-color: $gray-400;
+                p {
+                    padding: 1rem 2rem;
+                }
+            }
+            &.on {
+                .desc {
+                    z-index: 1;
+                    height: 12rem;
+                }
+            }
+            .title {
+                display: flex;
+                align-items: center;
+                padding: 2rem;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+        border-bottom: 1px solid $gray-100;
     }
 }

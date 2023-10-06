@@ -35,11 +35,11 @@
     </aside>
     <div class="dim"></div>
     <main>
-        <section class="flex align-start flex-col gap-40">
+        <section class="flex align-start flex-col gap-50 pb-80">
             <h1 class="sr-only">Test</h1>
             <div class="box t01">
                 <h3>#Java Script</h3>
-                <div class="mt-30">
+                <div class="mt-35">
                     <h4>Toggle</h4>
 <pre class="mt-12">
 <code>
@@ -51,7 +51,7 @@
 </code>
 </pre>
                 </div>
-                <div class="mt-30">
+                <div class="mt-35">
                     <h4>ClientHeight</h4>
 <pre class="mt-12">
 <code>
@@ -66,22 +66,77 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-35">
+                    <h4>Accordion</h4>
+<pre class="mt-12">
+<code>
+<span class="code-blue">const</span> <span class="code-lingtblue">accordion</span> = <span class="code-lingtblue2">document</span>.<span class="code-yellow">querySelector</span>(<span class="code-orange">".accordion"</span>);
+<span class="code-blue">const</span> <span class="code-lingtblue">titles</span> = <span class="code-lingtblue">accordion</span>.<span class="code-yellow">querySelectorAll</span>(<span class="code-orange">".title"</span>);
+
+<span class="code-blue">function</span> <span class="code-yellow">toggleAccordion</span>() {
+    <span class="code-blue">const</span> <span class="code-lingtblue">clickedItem</span> = <span class="code-blue">this</span>.<span class="code-lingtblue2">parentNode</span>;
+    <span class="code-blue">const</span> <span class="code-lingtblue">items</span> = <span class="code-lingtblue">accordion</span>.<span class="code-yellow">querySelectorAll</span>(<span class="code-orange">"li"</span>);
+
+    <span class="code-lingtblue">items</span>.<span class="code-yellow">forEach</span>((<span class="code-lingtblue2">item</span>) <span class="code-lingtblue">=></span> {
+        <span class="code-purple">if</span> (<span class="code-lingtblue">clickedItem</span> === <span class="code-lingtblue2">item</span>) {
+            <span class="code-lingtblue2">item</span>.<span class="code-lingtblue">classList</span>.<span class="code-yellow">toggle</span>(<span class="code-orange">"on"</span>);
+        } <span class="code-purple">else</span> {
+            <span class="code-lingtblue2">item</span>.<span class="code-lingtblue">classList</span>.<span class="code-yellow">remove</span>(<span class="code-orange">"on"</span>);
+        }
+    });
+}
+<span class="code-lingtblue">titles</span>.<span class="code-yellow">forEach</span>((<span class="code-lingtblue2">title</span>) <span class="code-lingtblue">=></span> {
+    <span class="code-lingtblue2">title</span>.<span class="code-yellow">addEventListener</span>(<span class="code-orange">"click"</span>, <span class="code-yellow">toggleAccordion</span>);
+});    
+</code>
+</pre>
+                    <div class="mt-15">
+                        <div class="accordion">
+                            <ul>
+                                <li class="on">
+                                    <div class="title"><span>Title 1</span></div>
+                                    <div class="desc">
+                                        <p>Content 1</p>
+                                        <p>Content 1-1</p>
+                                        <p>Content 1-2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title"><span>Title 2</span></div>
+                                    <div class="desc">
+                                        <p>Content 2</p>
+                                        <p>Content 2-1</p>
+                                        <p>Content 2-2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title"><span>Title 3</span></div>
+                                    <div class="desc">
+                                        <p>Content 3</p>
+                                        <p>Content 3-1</p>
+                                        <p>Content 3-2</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="box t02"></div>
+            <!-- <div class="box t02"></div>
             <div class="box t04"></div>
             <div class="box t03"></div>
             <div class="box t02"></div>
             <div class="box t04"></div>
             <div class="box t02"></div>
-            <div class="box t04"></div>
+            <div class="box t04"></div> -->
         </section>
-        <section class="flex align-start flex-col gap-40 mt-40">
+        <!-- <section class="flex align-start flex-col gap-50 mt-50">
             <div class="box t02"></div>
             <div class="box t04"></div>
             <div class="box t02"></div>
             <div class="box t04"></div>
             <div class="box t02"></div>
-        </section>
+        </section> -->
     </main>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
