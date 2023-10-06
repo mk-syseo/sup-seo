@@ -7,7 +7,7 @@ sup-seo git
 1. git clone
 
 ```sh
-git clone https://
+git clone https://github.com/ucomp-syseo/sup-seo.git
 ```
 
 2. vs code

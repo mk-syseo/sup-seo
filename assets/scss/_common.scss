@@ -133,6 +133,11 @@ pre {
 main {
     position: relative;
     height: 100%;
+    &:has(footer) {
+        > section {
+            min-height: 100%;
+        }
+    }
 }
 aside {
     position: fixed;
@@ -166,6 +171,7 @@ aside {
                 transition: all .3s;
                 color: $gray-100;
                 font-weight: 700;
+                position: relative;
                 &.btn-home {
                     height: 8rem;
                     background: url(./../images/front-logo.svg) no-repeat right;
@@ -175,6 +181,24 @@ aside {
             &:has(.btn-home) {
                 height: 8rem;
                 overflow: hidden;
+            }
+            &.on {
+                > a {
+                    color: $blue-100;
+                    > span {
+                        position: relative;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            left: 0;
+                            bottom: -.3rem;
+                            width: 100%;
+                            height: .3rem;
+                            background-color: $blue-100;
+                        }
+                    }
+                }
             }
         }
     }
@@ -242,6 +266,61 @@ aside {
     }
 }
 
+ul {
+    li {
+        font-size: 1.6rem;
+    }
+}
+
+.skills {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: end;
+    .txt-xlarge {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-right: .5rem;
+    }
+}
+.pr-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    .pr-card {
+        width: calc(50% - 1rem);
+    }
+}
+.pr-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    box-shadow: .5rem .5rem 1rem .5rem rgba(0,0,0,.08);
+    border-radius: 2rem;
+    padding: 2.5rem 3rem 2rem;
+    transition: all .3s;
+    .txt-small {
+        font-size: 1.3rem;
+        color: $gray-200;
+        width: 7rem;
+        display: inline-block;
+    }
+    .txt-large {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .txt-skills:not(:first-child) {
+        margin-left: 1.5rem;
+    }
+    &:hover {
+        transform: translateY(-1rem);
+    }
+}
+
 /* 스크롤트리거 테스트 */
 .box {
     width: calc(100% - 27rem);
@@ -265,6 +344,20 @@ aside {
     }
     &.t04 {
         background-color: $red-200;
+    }
+}
+
+footer {
+    background-color: $gray-100;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 200;
+    height: 18rem;
+    p {
+        opacity: .5;
     }
 }
 
