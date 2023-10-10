@@ -47,7 +47,7 @@ let num = 0;
 function showValue() {
     let posY = conScroll.getBoundingClientRect().top;
     valueScroll.innerHTML = posY;
-    if (posY < window.innerHeight * 0.87) {
+    if (posY < window.innerHeight * 0.8) {
         conScroll.classList.add('zoom');
     } else {
         conScroll.classList.remove('zoom');
