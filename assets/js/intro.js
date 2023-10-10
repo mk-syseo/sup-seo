@@ -12,33 +12,6 @@ menuDim.addEventListener('click', function(){
     noscrolls.classList.remove("noscroll");
 });
 
-//높이값 테스트
-const clientHeight = document.querySelector(".testDiv").clientHeight;
-const testBtn = document.querySelector(".btn-test");
-testBtn.addEventListener('click', function(){
-    alert(clientHeight);
-});
-
-//아코디언
-const accordion = document.querySelector(".accordion");
-const titles = accordion.querySelectorAll(".title");
-
-function toggleAccordion() {
-    const clickedItem = this.parentNode;
-    const items = accordion.querySelectorAll("li");
-
-    items.forEach((item) => {
-        if (clickedItem === item) {
-            item.classList.toggle("on");
-        } else {
-            item.classList.remove("on");
-        }
-    });
-}
-titles.forEach((title) => {
-    title.addEventListener("click", toggleAccordion);
-});
-
 // 스크롤이벤트
 const valueScroll = document.querySelector(".value-scroll");
 const conScroll = document.querySelector(".con-scroll");

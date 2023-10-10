@@ -39117,6 +39117,10 @@ pre {
   color: #ff8df9;
 }
 
+.code-green {
+  color: #d3ffae;
+}
+
 .btn-link {
   position: relative;
   display: flex;
@@ -39357,6 +39361,12 @@ ul li {
   line-height: 1;
   margin-right: 0.5rem;
 }
+.skills .txt-large {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
 
 .pr-wrap {
   display: flex;
@@ -39392,6 +39402,10 @@ ul li {
 }
 .pr-card:hover {
   transform: translateY(-1rem);
+}
+.pr-card.v2 .mt-10 {
+  border-top: 1px dashed rgba(0, 0, 0, 0.15);
+  padding-top: 2rem;
 }
 
 /* 스크롤트리거 테스트 */
@@ -39476,6 +39490,31 @@ footer p {
   cursor: pointer;
 }
 
+.value-scroll {
+  display: block;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0.3;
+}
+.value-scroll:before {
+  content: "scroll : ";
+  font-size: 1.4rem;
+}
+
+.con-scroll {
+  transition: all 0.5s;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+.con-scroll.zoom {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* mobile */
 @media (max-width: 800px) {
   .mp-area > video {
@@ -39558,8 +39597,11 @@ footer p {
   .pr-card .txt-skills {
     font-size: 1.3rem;
   }
+  .pr-card.v2 {
+    gap: 1rem;
+  }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1280px) {
   .pr-wrap {
     display: flex;
     flex-wrap: wrap;

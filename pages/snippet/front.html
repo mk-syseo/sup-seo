@@ -121,6 +121,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-35">
+                    <h4>Scroll</h4>
+                    <p class="value-scroll"></p>
+                    <div class="con-scroll"></div>
+<pre class="mt-12">
+<code>
+<span class="code-blue">const</span> <span class="code-lingtblue">valueScroll</span> = <span class="code-lingtblue2">document</span>.<span class="code-yellow">querySelector</span>(<span class="code-orange">".value-scroll"</span>);
+<span class="code-blue">const</span> <span class="code-lingtblue">conScroll</span> = <span class="code-lingtblue2">document</span>.<span class="code-yellow">querySelector</span>(<span class="code-orange">".con-scroll"</span>);
+<span class="code-blue">let</span> <span class="code-lingtblue2">num</span> = <span class="code-green">0</span>;
+
+<span class="code-blue">function</span> <span class="code-yellow">showValue</span>() {
+    <span class="code-blue">let</span> <span class="code-lingtblue2">posY</span> = <span class="code-lingtblue">conScroll</span>.<span class="code-yellow">getBoundingClientRect</span>().<span class="code-lingtblue">top</span>;
+    <span class="code-lingtblue">valueScroll</span>.<span class="code-lingtblue2">innerHTML</span> = <span class="code-lingtblue2">posY</span>;
+    <span class="code-purple">if</span> (<span class="code-lingtblue2">posY</span> &lt; <span class="code-lingtblue2">window</span>.<span class="code-lingtblue2">innerHeight</span> * <span class="code-green">0.9</span>) {
+        <span class="code-lingtblue">conScroll</span>.<span class="code-lingtblue">classList</span>.<span class="code-yellow">add</span>(<span class="code-orange">'zoom'</span>);
+    } <span class="code-purple">else</span> {
+        <span class="code-lingtblue">conScroll</span>.<span class="code-lingtblue">classList</span>.<span class="code-yellow">remove</span>(<span class="code-orange">'zoom'</span>);
+    }
+}
+<span class="code-lingtblue2">document</span>.<span class="code-yellow">addEventListener</span>(<span class="code-orange">'scroll'</span>, <span class="code-blue">function</span>() {
+    <span class="code-yellow">showValue</span>();
+});
+
+<span class="code-yellow">showValue</span>();
+</code>
+</pre>
+                </div>
             </div>
             <!-- <div class="box t02"></div>
             <div class="box t04"></div>

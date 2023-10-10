@@ -92,10 +92,13 @@
         .txt-skills {
             font-size: 1.3rem;
         }
+        &.v2 {
+            gap: 1rem;
+        }
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1280px) {
     .pr-wrap {
         display: flex;
         flex-wrap: wrap;

@@ -66,6 +66,9 @@ pre {
 .code-purple {
     color: $code-purple;
 }
+.code-green {
+    color: $code-green;
+}
 .btn-link {
     position: relative;
     display: flex;
@@ -321,6 +324,12 @@ ul {
         line-height: 1;
         margin-right: .5rem;
     }
+    .txt-large {
+        font-size: 2.6rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-right: .5rem;
+    }
 }
 .pr-wrap {
     display: flex;
@@ -354,6 +363,12 @@ ul {
     }
     &:hover {
         transform: translateY(-1rem);
+    }
+    &.v2 {
+        .mt-10 {
+            border-top: 1px dashed rgba(0,0,0,.15);
+            padding-top: 2rem;
+        }
     }
 }
 
@@ -439,4 +454,23 @@ footer {
         }
         border-bottom: 1px solid $gray-100;
     }
+}
+
+
+.value-scroll {
+    display: block; position: fixed; bottom: 3rem; right: 3rem; font-size: 3rem; font-weight: 700;
+    opacity: .3;
+    &:before {
+        content: "scroll : ";
+        font-size: 1.4rem;
+    }
+}
+.con-scroll {
+    transition: all .5s;
+    transform: translateY(10rem);
+    opacity: 0;
+}
+.con-scroll.zoom {
+	transform: translateY(0);
+    opacity: 1;
 }
