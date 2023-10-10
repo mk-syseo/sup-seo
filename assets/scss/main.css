@@ -39145,6 +39145,25 @@ pre {
   margin-top: -1.5rem;
   min-width: 18rem;
 }
+.btn-link + .btn-go {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  animation: fadeInOut 2s linear infinite;
+}
+.btn-link + .btn-go:hover {
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
 .btn-link p {
   font-size: 1.8rem;
   font-weight: 500;
@@ -39308,6 +39327,17 @@ aside.active + .dim {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 ul li {
@@ -39529,7 +39559,7 @@ footer p {
     font-size: 1.3rem;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   .pr-wrap {
     display: flex;
     flex-wrap: wrap;
