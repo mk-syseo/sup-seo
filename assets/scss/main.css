@@ -39407,6 +39407,9 @@ ul li {
   border-top: 1px dashed rgba(0, 0, 0, 0.15);
   padding-top: 2rem;
 }
+.pr-card.v2:hover {
+  transform: translateY(0);
+}
 
 /* 스크롤트리거 테스트 */
 .box {
