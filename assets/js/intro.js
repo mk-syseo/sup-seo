@@ -14,7 +14,9 @@ menuDim.addEventListener('click', function(){
 
 // 스크롤이벤트
 const valueScroll = document.querySelector(".value-scroll");
+const valueScrollc = document.querySelector(".value-scrollc");
 const conScroll = document.querySelector(".con-scroll");
+const con01Fadin = document.querySelector(".con01-fadin");
 let num = 0;
 
 function showValue() {
@@ -29,5 +31,18 @@ function showValue() {
 document.addEventListener('scroll', function() {
     showValue();
 });
-
 showValue();
+function showValueCon() {
+    let posYc = con01Fadin.getBoundingClientRect().top;
+    valueScrollc.innerHTML = posYc;
+    if (posYc < window.innerHeight * -.6) {
+        con01Fadin.classList.remove('zoom');
+    } else {
+        con01Fadin.classList.add('zoom');
+    }
+}
+document.addEventListener('scroll', function() {
+    showValueCon();
+});
+showValueCon();
+

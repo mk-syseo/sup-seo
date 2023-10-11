@@ -39411,6 +39411,34 @@ ul li {
   transform: translateY(0);
 }
 
+.con01-fadin {
+  animation: con01fadeOut 0.5s linear;
+  -webkit-animation-fill-mode: both;
+}
+.con01-fadin.zoom {
+  animation: con01fadeIn 0.5s linear;
+}
+
+@keyframes con01fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes con01fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+}
 /* 스크롤트리거 테스트 */
 .box {
   width: calc(100% - 27rem);
@@ -39503,6 +39531,20 @@ footer p {
   opacity: 0.3;
 }
 .value-scroll:before {
+  content: "scroll : ";
+  font-size: 1.4rem;
+}
+
+.value-scrollc {
+  display: block;
+  position: fixed;
+  bottom: 8rem;
+  right: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0.3;
+}
+.value-scrollc:before {
   content: "scroll : ";
   font-size: 1.4rem;
 }
