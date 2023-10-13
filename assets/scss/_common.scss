@@ -380,6 +380,7 @@ ul {
     -webkit-animation-fill-mode:both;
     &.zoom {
         animation: con01fadeIn .5s linear;
+        -webkit-animation-fill-mode:both;
     }
 }
 @keyframes con01fadeIn {

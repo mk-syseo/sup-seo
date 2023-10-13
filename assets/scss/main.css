@@ -39417,6 +39417,7 @@ ul li {
 }
 .con01-fadin.zoom {
   animation: con01fadeIn 0.5s linear;
+  -webkit-animation-fill-mode: both;
 }
 
 @keyframes con01fadeIn {
