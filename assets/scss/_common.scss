@@ -378,8 +378,8 @@ ul {
 .con01-fadin {
     opacity: 0;
     transform: translateY(-10rem);
-    animation: con01fadeOut .5s linear;
-    -webkit-animation-fill-mode:both;
+    // animation: con01fadeOut .5s linear;
+    // -webkit-animation-fill-mode:both;
     &.zoom {
         animation: con01fadeIn .5s linear;
         -webkit-animation-fill-mode:both;
