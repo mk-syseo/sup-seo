@@ -331,6 +331,12 @@ ul {
         margin-right: .5rem;
     }
 }
+.gskills {
+    margin-left: -800px;
+}
+body:has(.gskills) {
+    overflow-x: hidden;
+}
 .pr-wrap {
     display: flex;
     flex-wrap: wrap;

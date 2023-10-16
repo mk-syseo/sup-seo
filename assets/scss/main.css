@@ -39368,6 +39368,14 @@ ul li {
   margin-right: 0.5rem;
 }
 
+.gskills {
+  margin-left: -800px;
+}
+
+body:has(.gskills) {
+  overflow-x: hidden;
+}
+
 .pr-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -39645,6 +39653,9 @@ footer p {
   }
   .pr-card.v2 {
     gap: 1rem;
+  }
+  .gskills {
+    margin-left: -1600px;
   }
 }
 @media (max-width: 1280px) {
