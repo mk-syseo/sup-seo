@@ -39509,18 +39509,20 @@ footer p {
   border-top: 1px solid #333333;
 }
 .accordion ul > li .desc {
-  transition: all 0.3s;
-  height: 0;
-  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-out;
   font-size: 1.6rem;
   background-color: #eeeeee;
 }
-.accordion ul > li .desc p {
+.accordion ul > li .desc .desc-inner {
+  overflow: hidden;
+}
+.accordion ul > li .desc .desc-inner p {
   padding: 1rem 2rem;
 }
 .accordion ul > li.on .desc {
-  z-index: 1;
-  height: 12rem;
+  grid-template-rows: 1fr;
 }
 .accordion ul > li .title {
   display: flex;

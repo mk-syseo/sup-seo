@@ -34,6 +34,7 @@ function toggleAccordion() {
             item.classList.remove("on");
         }
     });
+
 }
 titles.forEach((title) => {
     title.addEventListener("click", toggleAccordion);
